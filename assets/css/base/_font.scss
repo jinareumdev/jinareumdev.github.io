@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@mixin font-face($name, $weight, $path){
+   @font-face{
+      font-family: $name;
+      font-weight: $weight;
+      src:url($path + ".eot");
+      src:url($path + ".eot?#iefix") format('embedded-opentype'),
+      url($path + ".woff") format('woff'),
+      url($path + ".otf") format('opentype'),
+      url($path + ".ttf") format('truetype');
+   }
+}
+
+// primary font :: NanumGothic
+@include font-face(NanumGothic , 400 , "../font/NanumGothic-Regular");
+@include font-face(NanumGothic , 700 , "../font/NanumGothic-Bold");

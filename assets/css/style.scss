@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* --------------------
+ * Last Modified: 2020-04
+ * Author: Jinareum (jinareum.76@gmail.com)
+ * Description: jinareum
+ -------------------- */
+
+//Depth level 1. [ base : reset -> font ]
+@import "base/normalize.css";
+@import "base/font";
+
+//Depth level 2. [ helper : mixin , variables ]
+@import "helper/mixin";
+@import "helper/variables";
+
+//Depth level 3. [ layout : components -> header -> footer  ]
+@import "layout/components";
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
+
+//Depth level 4. [ pages : index ]
+@import "pages/index";
