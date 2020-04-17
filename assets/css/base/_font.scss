@@ -15,3 +15,7 @@
 // primary font :: NanumGothic
 @include font-face(NanumGothic , 400 , "../font/NanumGothic-Regular");
 @include font-face(NanumGothic , 700 , "../font/NanumGothic-Bold");
+
+// english font :: Lato
+@include font-face(Lato , 400 , "../font/Lato-Regular");
+@include font-face(Lato , 700 , "../font/Lato-Bold");
