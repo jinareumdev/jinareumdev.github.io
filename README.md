@@ -22,5 +22,4 @@ jinareum.76@gmail.com
     + style
 * images /
 * js /
-* views /
-    + index.html 
+* index.html 
