@@ -1,9 +1,8 @@
 @charset "utf-8";
 
-@mixin default-font($korean,$weight:400){
-  $korean:NanumGothic;
+@mixin default-font($weight:400){
   font: {
-    family: Lato , $korean , "맑은고딕", Dotum, "돋움", Gulim, "굴림" , sans-serif;
+    family: Lato , NanumGothic , "맑은고딕", Dotum, "돋움", Gulim, "굴림" , sans-serif;
     weight:$weight;
   }
   color:$primary-color;

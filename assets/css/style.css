@@ -1,2 +1,33 @@
-@import url(base/normalize.css);@font-face{font-family:NanumGothic;font-weight:400;src:url("../font/NanumGothic-Regular.eot");src:url("../font/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"),url("../font/NanumGothic-Regular.woff") format("woff"),url("../font/NanumGothic-Regular.otf") format("opentype"),url("../font/NanumGothic-Regular.ttf") format("truetype")}@font-face{font-family:NanumGothic;font-weight:700;src:url("../font/NanumGothic-Bold.eot");src:url("../font/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"),url("../font/NanumGothic-Bold.woff") format("woff"),url("../font/NanumGothic-Bold.otf") format("opentype"),url("../font/NanumGothic-Bold.ttf") format("truetype")}
+@charset "UTF-8";
+/* --------------------
+ * Last Modified: 2020-04
+ * Author: Jinareum (jinareum.76@gmail.com)
+ * Description: jinareum
+ -------------------- */
+@import url(base/normalize.css);
+@font-face {
+  font-family: NanumGothic;
+  font-weight: 400;
+  src: url("../font/NanumGothic-Regular.eot");
+  src: url("../font/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"), url("../font/NanumGothic-Regular.woff") format("woff"), url("../font/NanumGothic-Regular.otf") format("opentype"), url("../font/NanumGothic-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: NanumGothic;
+  font-weight: 700;
+  src: url("../font/NanumGothic-Bold.eot");
+  src: url("../font/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../font/NanumGothic-Bold.woff") format("woff"), url("../font/NanumGothic-Bold.otf") format("opentype"), url("../font/NanumGothic-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: Lato;
+  font-weight: 400;
+  src: url("../font/Lato-Regular.eot");
+  src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.otf") format("opentype"), url("../font/Lato-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: Lato;
+  font-weight: 700;
+  src: url("../font/Lato-Bold.eot");
+  src: url("../font/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Bold.woff") format("woff"), url("../font/Lato-Bold.otf") format("opentype"), url("../font/Lato-Bold.ttf") format("truetype"); }
+body {
+  font-family: Lato , NanumGothic , "맑은고딕", Dotum, "돋움", Gulim, "굴림" , sans-serif;
+  font-weight: 400;
+  color: #333333; }
+
 /*# sourceMappingURL=style.css.map */
