@@ -11,78 +11,105 @@
     <title>Jinareum Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/jquery-2.2.4.min.js"></script>
-    <!--<script src="https://player.vimeo.com/api/player.js"></script>-->
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="assets/js/common.js"></script>
 </head>
 <body>
     <div class="wrap">
         <!-- sidebar start -->
-            <!--<div class="sidebar">-->
-                <!--<button class="side-close"></button>-->
-                <!--<div class="sidebar-top">-->
-                    <!--JINAREUM :D-->
-                <!--</div>-->
-                <!--<div class="sidebar-wrapper">-->
-                    <!--<ul class="mob-nav">-->
-                        <!--<li>-->
-                            <!--<a href="">-->
-                                <!--<span>&lt;!&ndash;메인비주얼&ndash;&gt;</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="">-->
-                                <!--<span>&lt;!&ndash;프로젝트&ndash;&gt;</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="">-->
-                                <!--<span>&lt;!&ndash;프로필&ndash;&gt;</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="">-->
-                                <!--<span>&lt;!&ndash;프로세스&ndash;&gt;</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a href="">-->
-                                <!--<span>&lt;!&ndash;연락처&ndash;&gt;</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-            <!--</div>-->
+        <div class="sidebar" style="display:none;">
+                <button class="side-close"></button>
+                <div class="sidebar-top">
+                    JINAREUM :D
+                </div>
+                <div class="sidebar-wrapper">
+                    <ul class="mob-nav">
+                        <li>
+                            <a href="">
+                                <span><!--메인비주얼--></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span><!--프로젝트--></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span><!--프로필--></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span><!--프로세스--></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span><!--연락처--></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         <!-- // side bar -->
         <div class="main-panel">
             <div class="menu-btn">
                 <button>
                     <span class="hidden">전체 메뉴 버튼</span>
-                    <span></span>
-                    <span></span>
+                    <span class="bar"></span>
                 </button>
             </div>
             <!-- //메뉴 버튼 -->
             <nav class="quick-nav">
                 <ul>
-                    <li><a href="javascript:;"><!--메인비주얼--></a></li>
-                    <li><a href="javascript:;"><!--프로젝트--></a></li>
-                    <li><a href="javascript:;"><!--프로필--></a></li>
-                    <li><a href="javascript:;"><!--프로세스--></a></li>
-                    <li><a href="javascript:;"><!--연락처--></a></li>
+                    <li>
+                        <a href="#visual" class="active">
+                            <!--메인비주얼-->
+                            <span class="hidden">Main</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">
+                            <!--프로젝트-->
+                            <span class="hidden">Project</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#profile">
+                            <!--프로필-->
+                            <span class="hidden">Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#process">
+                            <!--프로세스-->
+                            <span class="hidden">Process</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <!--연락처-->
+                            <span class="hidden">Contact</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- //네비게이션 -->
-            <section id="start">
+            <section id="visual">
                 <h2 class="hidden">포트폴리오 인트로 및 비디오 섹션</h2>
                 <div class="video-wrap">
-                    <!--<iframe src="https://player.vimeo.com/video/120957975?&api=1&player_id=vimeo_player&autoplay=100&loop=100&autopause=1"-->
-                    <!--frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+                    <div class="video">
+                        <iframe src="https://player.vimeo.com/video/120957975?&api=1&player_id=vimeo_player&autoplay=100&loop=100&autopause=1"
+                                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="logo-wrap">
                     <h1>Jinareum's Portfolio</h1>
+                    <h4>Slow but Steady Development <br>better than yesterday</h4>
                     <p>원활한 커뮤니케이션과 효율적인 코드 작성을 추구하며 웹을 만듭니다!</p>
-                    <div class="mouse"></div>
                 </div>
+                <div class="mouse"></div>
             </section>
             <!-- // 비디오 섹션 -->
             <section id="portfolio">
@@ -189,7 +216,7 @@
                 </div>
             </section>
             <!-- // portfolio 섹션 -->
-            <section id="profile">
+            <section id="profile" style="display:none;">
                 <div class="container">
                     <h2>Jinareum</h2>
                     <h3>Web Publisher</h3>
@@ -235,7 +262,7 @@
                 </div>
             </section>
             <!-- // 프로필 -->
-            <section id="process">
+            <section id="process" style="display:none;">
                 <div class="container">
                     <h2>The process of coding</h2>
                     <div class="process-content">
@@ -282,23 +309,23 @@
                 </div>
             </section>
             <!-- // 프로세스 -->
-            <section id="contact">
+            <section id="contact" style="display:none;">
                 <h2>Contact</h2>
                 <div class="information">
                 </div>
             </section>
             <!-- // 연락처 -->
-            <footer>
+            <footer style="display:none;">
                 <p>Copyright &copy; 2020 by JINAREUM All rights reserved.</p>
             </footer>
         </div>
         <!-- // main-panel -->
     </div>
-    <!--<script>-->
-        <!--var iframe = document.querySelector('iframe');-->
-        <!--var player = new Vimeo.Player(iframe);-->
+    <script>
+        var iframe = document.querySelector('iframe');
+        var player = new Vimeo.Player(iframe);
 
-        <!--player.setVolume(0);-->
-    <!--</script>-->
+        player.setVolume(0);
+    </script>
 </body>
 </html>

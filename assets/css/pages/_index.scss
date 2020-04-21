@@ -1,1 +1,34 @@
 @charset "utf-8";
+/*]-- visual --[*/
+#visual{
+  height:100vh;
+  overflow:hidden;
+}
+.video{
+  @at-root .video-wrap{position: relative;height:100vh;}
+  position: absolute;top:0;right:0;bottom:0;left:0;
+  width: 100%;height:100vh;
+  background:url($imgpath + 'video-bg.png') 100% 100% no-repeat;
+  overflow:hidden;
+  &:after{
+    content:"";
+    display: block;
+    position: absolute;top:0;left:0;right:0;bottom:0;
+    width: 100%;height:100vh;
+    background:rgba(51,51,51,0.8);
+  }
+  iframe{
+    position: absolute;top:-5vh;left:0;right:0;
+    display: block;
+    width: 100%;height:118vh;
+    opacity:0.6;
+  }
+}
+.logo-wrap{
+  position: absolute;@include vertical();
+  width:100%;
+  text-align: center;color:$white;
+  h1{font-size:4rem;}
+  h4{padding:20px 0 30px;font-size:1.3rem;line-height:1.8rem;}
+  p{padding-top:20px;font-size:1rem;}
+}

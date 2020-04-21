@@ -31,14 +31,18 @@
 /*]-- util --[*/
 /*]-- border / boxs --[*/
 /*] -- transition --[*/
+/*]-- vender prefix --[*/
 /*]-- position --[*/
 /*]-- 말 줄임 --[*/
 /*]-- 여백제거 --[*/
 /*]-- 색상 --[*/
 /*]-- 이미지 경로 --[*/
 /*]-- 폰트 --[*/
-.mouse-before {
-  position: relative;
+.mouse {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 28px;
   height: 37px;
   margin: 0 auto;
@@ -49,7 +53,7 @@
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px; }
-  .mouse-before:after {
+  .mouse:after {
     content: "";
     position: absolute;
     left: calc(50% - 2px);
@@ -88,11 +92,166 @@
   top: 0;
   left: 0;
   width: 445px;
-  height: 208px; }
+  height: 208px;
+  -moz-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  z-index: 100; }
+  .menu-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -223px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    -webkit-transform: skew(-65deg);
+    -ms-transform: skew(-65deg);
+    transform: skew(-65deg); }
+  .menu-btn > button {
+    position: relative;
+    top: 56px;
+    left: 80px;
+    width: 34px;
+    height: 30px;
+    cursor: pointer; }
+    .menu-btn > button .bar {
+      position: relative;
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: #000000;
+      -moz-transition: width 300ms;
+      -o-transition: width 300ms;
+      -webkit-transition: width 300ms;
+      transition: width 300ms; }
+      .menu-btn > button .bar:before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 32px;
+        height: 100%;
+        background: #000000;
+        -moz-transition: width 300ms;
+        -o-transition: width 300ms;
+        -webkit-transition: width 300ms;
+        transition: width 300ms; }
+    .menu-btn > button:hover .bar {
+      width: 100%; }
+      .menu-btn > button:hover .bar:before {
+        width: 100%; }
 
 body {
   font-family: Lato , NanumGothic , "맑은고딕", Dotum, "돋움", Gulim, "굴림" , sans-serif;
   font-weight: 400;
   color: #333333; }
+
+.wrap {
+  background-color: #999999; }
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.quick-nav {
+  position: fixed;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  z-index: 10; }
+  .quick-nav li {
+    display: block;
+    margin-bottom: 10px; }
+    .quick-nav li:last-child {
+      margin-bottom: 0; }
+    .quick-nav li a {
+      display: block;
+      opacity: 0.4;
+      color: #ffffff; }
+      .quick-nav li a:before {
+        content: "";
+        display: block;
+        width: 7px;
+        height: 7px;
+        border: 1px solid #333333;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .quick-nav li a.active {
+        opacity: 1; }
+        .quick-nav li a.active:after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 40px;
+          margin: 8px 3px 5px;
+          background: #333333; }
+
+/*]-- visual --[*/
+#visual {
+  height: 100vh;
+  overflow: hidden; }
+
+.video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/video-bg.png") 100% 100% no-repeat;
+  overflow: hidden; }
+  .video-wrap {
+    position: relative;
+    height: 100vh; }
+  .video:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(51, 51, 51, 0.8); }
+  .video iframe {
+    position: absolute;
+    top: -5vh;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 118vh;
+    opacity: 0.6; }
+
+.logo-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #ffffff; }
+  .logo-wrap h1 {
+    font-size: 4rem; }
+  .logo-wrap h4 {
+    padding: 20px 0 30px;
+    font-size: 1.3rem;
+    line-height: 1.8rem; }
+  .logo-wrap p {
+    padding-top: 20px;
+    font-size: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

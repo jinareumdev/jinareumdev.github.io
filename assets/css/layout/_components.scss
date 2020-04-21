@@ -1,7 +1,7 @@
 @charset "utf-8";
 // main visual mouse wheel
-.mouse-before{
-  position: relative;
+.mouse{
+  position: absolute;top:80%;@include horizontal;
   width: 28px; height: 37px;
   margin:0 auto;
   //@include border-radius;
@@ -27,4 +27,36 @@
 .menu-btn{
   position: fixed;top:0;left:0;
   width: 445px;height:208px;
+  @include transition(all 500ms ease);
+  z-index:100;
+  &:before{
+    content:"";
+    position: absolute;top:0;left:-223px;
+    display:block;width:100%;height:100%;
+    background:$white;
+    @include prefix(transform, skew(-65deg), webkit ms);
+  }
+  > button{
+    position: relative; top:56px;left:80px;
+    width: 34px;height:30px;
+    cursor: pointer;
+    .bar{
+      position: relative;
+      display: block;
+      width: 26px;height: 3px;
+      background:$strong;
+      @include transition(width 300ms);
+      &:before{
+        content:"";
+        position: absolute;top:10px;left:0;
+        width: 32px;height:100%;
+        background:$strong;
+        @include transition(width 300ms);
+      }
+    }
+    &:hover .bar{
+      width:100%;
+      &:before{width:100%;}
+    }
+  }
 }
