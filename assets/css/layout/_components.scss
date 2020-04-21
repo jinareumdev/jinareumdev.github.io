@@ -4,7 +4,6 @@
   position: absolute;top:80%;@include horizontal;
   width: 28px; height: 37px;
   margin:0 auto;
-  //@include border-radius;
   @include border(2px,$white);
   @include border-radius(12px);
   &:after{
