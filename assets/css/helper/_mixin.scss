@@ -14,15 +14,31 @@ $tablePoint:1024px;
 $tableVerticalPoint:768px;
 $tableMargin:24px;
 $mobilePoint:680px;
-$mobileMargin:16px;
+$mobileMargin:20px;
 $devicePoint:420px;
 
-@mixin breakPoint($point:null, $minpoint:0px){
-  @media all and ( min-width: #{$minpoint} ) and ( max-width: #{$point} ) {
-    @content;
+//breakpoint
+@mixin breakPoint($browser-width) {
+  $tabletPoint: 1100px;
+  $mobilePoint: 990px;
+  @if $browser-width == 'mobile' {
+    @media (min-width: 0) and (max-width: $mobilePoint) {
+      @content;
+    }
+  } @else if $browser-width == 'tablet' {
+    @media (min-width: ($mobilePoint + 1px)) and (max-width: $tabletPoint) {
+      @content;
+    }
+  } @else if $browser-width == 'pc' {
+    @media screen and (min-width: ($tabletPoint + 1px)) {
+      @content;
+    }
+  } @else if $browser-width == 'all'{
+    @media screen and (min-width:1300px){
+      @content;
+    }
   }
 }
-
 /*]-- keyframes / animation --[*/
 @mixin keyframe($name) {
   @-webkit-keyframes #{$name} {
