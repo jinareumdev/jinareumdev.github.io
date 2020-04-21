@@ -1,1 +1,30 @@
 @charset "utf-8";
+// main visual mouse wheel
+.mouse-before{
+  position: relative;
+  width: 28px; height: 37px;
+  margin:0 auto;
+  //@include border-radius;
+  @include border(2px,$white);
+  @include border-radius(12px);
+  &:after{
+    content:"";
+    position: absolute;left:calc(50% - 2px);top:25%;
+    width: 4px;height:9px;
+    background-color:$white;
+    border-radius: 20px;
+    @include animation(wheel, 800ms, ease-in-out, infinite);
+  }
+}
+// main visual mouse
+@include keyframe (wheel){
+  0%{ transform:translate(0, 5px);}
+  50%{ transform:translate(0, 0);}
+  100%{ transform:translate(0, 5px);}
+}
+
+// button
+.menu-btn{
+  position: fixed;top:0;left:0;
+  width: 445px;height:208px;
+}

@@ -1,9 +1,131 @@
 @charset "utf-8";
 
+/*]-- body default font --[*/
 @mixin default-font($weight:400){
   font: {
     family: Lato , NanumGothic , "맑은고딕", Dotum, "돋움", Gulim, "굴림" , sans-serif;
     weight:$weight;
   }
-  color:$primary-color;
+  color:$primary-font;
 }
+
+/*]-- breakpoint --[*/
+$tablePoint:1024px;
+$tableVerticalPoint:768px;
+$tableMargin:24px;
+$mobilePoint:680px;
+$mobileMargin:16px;
+$devicePoint:420px;
+
+@mixin breakPoint($point:null, $minpoint:0px){
+  @media all and ( min-width: #{$minpoint} ) and ( max-width: #{$point} ) {
+    @content;
+  }
+}
+
+/*]-- keyframes / animation --[*/
+@mixin keyframe($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+@mixin animation ($name, $duration, $timing, $iteration) {
+  -webkit-animation: $name $duration $timing $iteration;
+  -o-animation: $name $duration $timing $iteration;
+  animation: $name $duration $timing $iteration;
+}
+
+/*]-- util --[*/
+@mixin clearfix {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+/*]-- border / boxs --[*/
+@mixin box-sizing($boxmodel:border-box) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+@mixin border-radius( $radius: 2px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin border( $width, $color) {
+  border: $width solid $color;
+  @include box-sizing;
+}
+
+/*] -- transition --[*/
+@mixin transition($transition...) {
+  -moz-transition:$transition;
+  -o-transition:$transition;
+  -webkit-transition: $transition;
+  transition:$transition;
+}
+@mixin transition-property($property...) {
+  -moz-transition-property:$property;
+  -o-transition-property: $property;
+  -webkit-transition-property:$property;
+  transition-property: $property;
+}
+@mixin transition-duration($duration...) {
+  -moz-transition-property:$duration;
+  -o-transition-property:$duration;
+  -webkit-transition-property:$duration;
+  transition-property:$duration;
+}
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function:$timing;
+  -o-transition-timing-function:$timing;
+  -webkit-transition-timing-function:$timing;
+  transition-timing-function:$timing;
+}
+@mixin transition-delay($delay...) {
+  -moz-transition-delay:$delay;
+  -o-transition-delay:$delay;
+  -webkit-transition-delay:$delay;
+  transition-delay:$delay;
+}
+
+/*]-- position --[*/
+@mixin vertical{
+  top:50%;
+  transform:translateY(-50%);
+}
+@mixin horizontal{
+  left:50%;
+  transform:translateX(-50%);
+}
+@mixin center{
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+}
+
+/*]-- 말 줄임 --[*/
+@mixin abbreviation($line:2) {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box; -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+@mixin ellipsis{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*]-- 여백제거 --[*/
+@mixin remove-margin{font-size:0;letter-spacing:0;word-spacing: 0;}

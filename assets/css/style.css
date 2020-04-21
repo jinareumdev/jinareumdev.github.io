@@ -25,6 +25,71 @@
   font-weight: 700;
   src: url("../font/Lato-Bold.eot");
   src: url("../font/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Bold.woff") format("woff"), url("../font/Lato-Bold.otf") format("opentype"), url("../font/Lato-Bold.ttf") format("truetype"); }
+/*]-- body default font --[*/
+/*]-- breakpoint --[*/
+/*]-- keyframes / animation --[*/
+/*]-- util --[*/
+/*]-- border / boxs --[*/
+/*] -- transition --[*/
+/*]-- position --[*/
+/*]-- 말 줄임 --[*/
+/*]-- 여백제거 --[*/
+/*]-- 색상 --[*/
+/*]-- 이미지 경로 --[*/
+/*]-- 폰트 --[*/
+.mouse-before {
+  position: relative;
+  width: 28px;
+  height: 37px;
+  margin: 0 auto;
+  border: 2px solid #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px; }
+  .mouse-before:after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 2px);
+    top: 25%;
+    width: 4px;
+    height: 9px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    -webkit-animation: wheel 800ms ease-in-out infinite;
+    -o-animation: wheel 800ms ease-in-out infinite;
+    animation: wheel 800ms ease-in-out infinite; }
+
+@-webkit-keyframes wheel {
+  0% {
+    transform: translate(0, 5px); }
+  50% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(0, 5px); } }
+@-moz-keyframes wheel {
+  0% {
+    transform: translate(0, 5px); }
+  50% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(0, 5px); } }
+@keyframes wheel {
+  0% {
+    transform: translate(0, 5px); }
+  50% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(0, 5px); } }
+.menu-btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 445px;
+  height: 208px; }
+
 body {
   font-family: Lato , NanumGothic , "맑은고딕", Dotum, "돋움", Gulim, "굴림" , sans-serif;
   font-weight: 400;
