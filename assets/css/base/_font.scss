@@ -12,14 +12,14 @@
    }
 }
 
-// primary font :: NanumGothic
-@include font-face(NanumGothic , 400 , "../font/NanumGothic-Regular");
-@include font-face(NanumGothic , 700 , "../font/NanumGothic-Bold");
+// primary font :: NotoSans
+@include font-face(Noto , 400 , "../font/NotoSansKR-Regular-Hestia");
+@include font-face(Noto , 500 , "../font/NotoSansKR-Medium-Hestia");
+@include font-face(Noto , 700 , "../font/NotoSansKR-Bold-Hestia");
 
 // english font :: Lato
 @include font-face(Lato , 400 , "../font/Lato-Regular");
 @include font-face(Lato , 700 , "../font/Lato-Bold");
-
 
 // English font
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');

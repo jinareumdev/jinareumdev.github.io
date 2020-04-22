@@ -59,7 +59,14 @@
     }
   }
 }
-.caution{
+.caution{ //링크 하단 주의사항
   font-size:13px;
   color:$light-gray;
+}
+.bg-text{ // bg로 깔 font
+  position: absolute;
+  font-family: $point-font;
+  color:$middle-gray;
+  opacity: 0.2;
+  z-index:2
 }
