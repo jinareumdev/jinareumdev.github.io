@@ -145,6 +145,10 @@
       .menu-btn > button:hover .bar:before {
         width: 100%; }
 
+.caution {
+  font-size: 13px;
+  color: #cccccc; }
+
 body {
   font-family: Lato , NanumGothic , "맑은고딕", Dotum, "돋움", Gulim, "굴림" , sans-serif;
   font-weight: 400;
@@ -229,7 +233,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.4); }
+    background: rgba(33, 33, 33, 0.6); }
   .video video {
     position: absolute;
     top: 0;
@@ -261,7 +265,7 @@ body {
 #portfolio {
   overflow: hidden;
   color: #ffffff;
-  background-color: #000000; }
+  background-color: #212121; }
 
 .portfolio-title {
   position: relative;
@@ -300,8 +304,8 @@ body {
     line-height: 1.7; }
 
 .output-list {
-  padding-top: 150px;
-  background: skyblue; }
+  position: relative;
+  padding: 150px 0 80px; }
   .output-list::after {
     display: block;
     content: "";
@@ -310,10 +314,12 @@ body {
     width: 33.33%;
     max-width: 370px;
     margin-right: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     float: left; }
     .output-list li:nth-child(3n) {
       margin-right: 0; }
+    .output-list li:nth-child(3n-2) {
+      clear: left; }
     .output-list li h3 {
       font-size: 1.5rem;
       line-height: 2rem;
@@ -324,63 +330,115 @@ body {
       font-weight: 700; }
     .output-list li p {
       font-size: 1rem; }
-  .output-list .photo-wrap {
-    position: relative;
-    overflow: hidden;
-    margin: 0 0 15px;
-    cursor: pointer; }
-    .output-list .photo-wrap img {
-      display: block;
-      height: auto;
-      opacity: 0.7;
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1); }
-    .output-list .photo-wrap span {
+    .output-list li .photo-wrap {
+      position: relative;
+      overflow: hidden;
+      margin: 0 0 15px;
+      cursor: pointer; }
+      .output-list li .photo-wrap img {
+        display: block;
+        height: auto;
+        opacity: 0.7;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -moz-transition: all 400ms ease-in-out;
+        -o-transition: all 400ms ease-in-out;
+        -webkit-transition: all 400ms ease-in-out;
+        transition: all 400ms ease-in-out; }
+      .output-list li .photo-wrap:hover img {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }
+      .output-list li .photo-wrap span {
+        position: absolute;
+        display: block; }
+      .output-list li .photo-wrap .corner {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100px;
+        height: 100px;
+        z-index: 3; }
+      .output-list li .photo-wrap .triangle {
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-width: 0 0 100px 100px;
+        border-color: transparent transparent #ffffff transparent;
+        border-style: solid; }
+      .output-list li .photo-wrap .plus {
+        bottom: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px; }
+        .output-list li .photo-wrap .plus span {
+          opacity: 1;
+          background: #666666;
+          -webkit-transform: 0deg;
+          -ms-transform: 0deg;
+          transform: 0deg;
+          -moz-transition: all 500ms ease;
+          -o-transition: all 500ms ease;
+          -webkit-transition: all 500ms ease;
+          transition: all 500ms ease; }
+          .output-list li .photo-wrap .plus span:nth-child(1) {
+            top: 0;
+            left: 13px;
+            bottom: 0;
+            width: 6px;
+            height: 32px; }
+          .output-list li .photo-wrap .plus span:nth-child(2) {
+            top: 13px;
+            left: 0;
+            right: 0;
+            width: 32px;
+            height: 6px; }
+    .output-list li.active .triangle {
+      border-color: transparent transparent #cccccc transparent; }
+    .output-list li.active .plus span {
+      background: #ffffff;
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
+      .output-list li.active .plus span:nth-child(2) {
+        opacity: 0; }
+  .output-list .output-bio {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 25px 0;
+    padding: 40px 30px 20px;
+    background: linear-gradient(45deg, #333333 0%, #444444 50%, #837d7c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#837d7c',GradientType=1 );
+    color: #ffffff; }
+    .output-list .output-bio:before {
+      content: "";
       position: absolute;
-      display: block; }
-    .output-list .photo-wrap .corner {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 100px;
-      height: 100px;
-      z-index: 3; }
-    .output-list .photo-wrap .triangle {
       top: 0;
-      right: 0;
+      left: 12.5%;
+      display: block;
       width: 0;
       height: 0;
-      border-width: 0 0 100px 100px;
-      border-color: transparent transparent #ffffff transparent;
-      border-style: solid; }
-    .output-list .photo-wrap .plus {
-      bottom: 10px;
-      right: 10px;
-      width: 32px;
-      height: 32px; }
-      .output-list .photo-wrap .plus span {
-        opacity: 1;
-        background: #666666;
-        -webkit-transform: 0deg;
-        -ms-transform: 0deg;
-        transform: 0deg;
-        -moz-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        -webkit-transition: all 500ms ease;
-        transition: all 500ms ease; }
-        .output-list .photo-wrap .plus span:nth-child(1) {
-          top: 0;
-          left: 13px;
-          bottom: 0;
-          width: 6px;
-          height: 32px; }
-        .output-list .photo-wrap .plus span:nth-child(2) {
-          top: 13px;
-          left: 0;
-          right: 0;
-          width: 32px;
-          height: 6px; }
+      border-style: solid;
+      border-width: 20px 37.5px 0 37.5px;
+      border-color: #212121 transparent transparent transparent; }
+    .output-list .output-bio p:nth-child(1) {
+      font-size: 1.24rem;
+      line-height: 1.6; }
+    .output-list .output-bio p:nth-child(2) {
+      padding-top: 10px;
+      line-height: 2; }
+    .output-list .output-bio a {
+      display: block;
+      width: 35px;
+      height: 35px;
+      margin-top: 15px;
+      background: url("../images/link.png") 50% 50% no-repeat;
+      font-size: 0; }
   @media (min-width: 0) and (max-width: 990px) {
     .output-list {
       width: 33.33%; } }
