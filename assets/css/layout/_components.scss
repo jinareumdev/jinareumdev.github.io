@@ -1,4 +1,15 @@
 @charset "utf-8";
+//topbutton
+.top{
+  position: fixed;
+  width: 45px;height:45px;
+  right:20px;bottom:120px;
+  background:url($imgpath + 'top.png') no-repeat $light-gray;
+  background-position:center center;
+  z-index:100;
+  cursor: pointer;
+  @include transition(all 400ms ease-in-out);
+}
 // main visual mouse wheel
 .mouse{
   position: absolute;top:80%;@include horizontal;
