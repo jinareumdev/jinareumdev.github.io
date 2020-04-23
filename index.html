@@ -54,41 +54,39 @@
     </div>
     <!-- // side bar -->
     <div class="main-panel">
-        <div class="menu-btn">
-            <button>
-                <span class="hidden">전체 메뉴 버튼</span>
-                <span class="bar"></span>
-            </button>
-        </div>
+        <!--<div class="menu-btn">-->
+            <!--<button>-->
+                <!--<span class="hidden">전체 메뉴 버튼</span>-->
+                <!--<span class="bar"></span>-->
+            <!--</button>-->
+        <!--</div>-->
         <!-- //메뉴 버튼 -->
+        <header>
+            <button class="header-logo"></button>
+        </header>
         <nav class="quick-nav">
             <ul>
                 <li>
-                    <a href="#visual" class="active">
+                    <a href="#visual" class="anchor-link">
                         <!--메인비주얼-->
                         <span>Main</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#portfolio">
+                    <a href="#portfolio" class="anchor-link">
                         <!--프로젝트-->
                         <span>Project</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#profile">
+                    <a href="#profile" class="anchor-link">
                         <!--프로필-->
                         <span>Profile</span>
                     </a>
                 </li>
-                <!--<li>-->
-                    <!--<a href="#process">-->
-                        <!--&lt;!&ndash;프로세스&ndash;&gt;-->
-                        <!--<span class="hidden">Process</span>-->
-                    <!--</a>-->
-                <!--</li>-->
+
                 <li>
-                    <a href="#contact">
+                    <a href="#contact" class="anchor-link">
                         <!--연락처-->
                         <span>Contact</span>
                     </a>
@@ -96,7 +94,7 @@
             </ul>
         </nav>
         <!-- //네비게이션 -->
-        <section id="visual">
+        <section id="visual" class="contents">
             <h2 class="hidden">포트폴리오 인트로 및 비디오 섹션</h2>
             <div class="video-wrap">
                 <div class="video">
@@ -119,7 +117,7 @@
             <div class="mouse"></div>
         </section>
         <!-- // 비디오 섹션 -->
-        <section id="portfolio">
+        <section id="portfolio" class="contents">
             <div class="container">
                 <div class="portfolio-title">
                     <h2>Portfolio :D</h2>
@@ -318,7 +316,7 @@
             </div>
         </section>
         <!-- // portfolio 섹션 -->
-        <section id="profile">
+        <section id="profile" class="contents">
             <p class="bg-text">Profile</p>
             <div class="container">
                 <div class="profile-title">
@@ -431,55 +429,8 @@
 
         </section>
         <!-- // 프로필 -->
-        <section id="process" style="display:none;">
-            <div class="container">
-                <h2>The process of coding</h2>
-                <div class="process-content">
-                    <!--
-                        1. 디자인 분석
-                        2. SASS 시트 구조화 및 normalize
-                        3. 레이아웃 markup
-                        4. 디자인 분석으로 공통 레이아웃 컴포넌트 스타일 설정
-                        5. 퍼블리싱 작업
-                        6. JS작성
-                        7. 검토 및 피드백
-                    -->
-                    <div class="content-left">
-                        <span>STEP 1.</span>
-                        <h5>디자인 분석</h5>
-                        <p>바로 코딩을 시작하지 않고, 디자인을 보며 공통 컬러 / 폰트 / 레이아웃 / 컴포넌트 분석을 합니다.</p>
-                    </div>
-                    <div class="content-right">
-                        <span>STEP 2.</span>
-                        <h5>SCSS 시트 구조화 및 normalize</h5>
-                        <p>SCSS를 구조화 하여 컴포넌트와 레이아웃에 대한 스타일을 지정하고, normailize.css를 통해 HTML 요소와 브라우저에 일관성을 위한 코드를
-                            작성합니다.</p>
-                    </div>
-                    <div class="content-left">
-                        <span>STEP 3.</span>
-                        <h5>레이아웃 Markup</h5>
-                        <p>디자인 분석을 끝낸 뒤 헤더 - 푸터 - 공통 레이아웃의 마크업을 끝낸 뒤 세부적인 요소의 마크업을 시작합니다.</p>
-                    </div>
-                    <div class="content-right">
-                        <span>STEP 4.</span>
-                        <h5>스타일 시트 작성</h5>
-                        <p>디자인의 세부요소를 표현하기 위한 스타일 시트 작성을 합니다.</p>
-                    </div>
-                    <div class="content-left">
-                        <span>STEP 5.</span>
-                        <h5>웹의 역동성 부여</h5>
-                        <p>Jquery 와 JS를 통해 웹의 역통적인 움직임을 표현하기 위한 코딩을 합니다.</p>
-                    </div>
-                    <div class="content-right">
-                        <span>STEP 6.</span>
-                        <h5>검수 및 피드백</h5>
-                        <p>작업을 마친 후 스스로 검수를 하며 디자인과 다른 곳, 크로스 브라우징 여부 등 다양하게 검토를 하고, 피드백을 받습니다.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- // 프로세스 -->
-        <section id="contact">
+
+        <section id="contact" class="contents">
             <div class="contact-bg"></div>
             <div class="container">
                 <h2>Contact!</h2>
@@ -492,22 +443,17 @@
                 <p class="contact email">jinareum.76@gmail.com</p>
                 <br>
                 <p class="contact phone">+82 10-9475-9790</p>
+                <h6>끝까지 읽어주셔서 감사합니다 :D</h6>
             </div>
         </section>
         <!-- // 연락처 -->
         <!-- top -->
-        <div class="top"></div>
         <footer>
             <p>Copyright &copy; 2020 by JINAREUM All rights reserved.</p>
         </footer>
     </div>
     <!-- // main-panel -->
 </div>
-<script>
-    var iframe = document.querySelector('iframe');
-    var player = new Vimeo.Player(iframe);
 
-    player.setVolume(0);
-</script>
 </body>
 </html>

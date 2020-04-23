@@ -1,4 +1,22 @@
 @charset "utf-8";
+// 로고
+header{
+  position: fixed;left:0;top:0;
+  width: 100%;
+  z-index:200;
+  .header-logo{
+    position: relative;left:60px;top:0;
+    width:50px;height:50px;
+    margin-top: 60px;
+    background:url($imgpath + 'logo.png') no-repeat;
+    background-size:contain;
+    cursor: pointer;
+    @include transition(opacity 300ms ease);
+    &:hover{
+      opacity:0.7;
+    }
+  }
+}
 // 네비게이션
 .quick-nav{
   position: fixed;left:80px;@include vertical;
@@ -12,19 +30,19 @@
       position: relative;
       display: block;
       opacity: 0.5;color:$white;
-      &:before{
+      &:after{
         content:"";
         display: block;
-        width: 7px;height:7px;
-        @include border(1px,$primary-font);
+        width: 12px;height:12px;
+        @include border(1px,$nav);
         @include prefix(transform,rotate(45deg), webkit ms)
       }
       span{
-        position: absolute;top:-3px;
+        position: absolute;bottom:-5px;
         display: block;
         padding-left:0;
         opacity:0;
-        white-space: nowrap;color:$primary-font;font-size:15px;
+        white-space: nowrap;color:$nav;font-size:15px;
         @include transition(all 450ms ease);
       }
       &:hover{
@@ -33,16 +51,19 @@
           opacity:1;
         }
       }
-      &.active{
-        opacity: 1;
-        &:after{
-          content:"";
-          display: block;
-          width: 1px;height:40px;
-          margin:15px 3px 0;
-          background:$primary-font;
-        }
-      }
     }
+    &.active a{
+      opacity: 1;
+      &:after{background:$nav;}
+      &:before{
+        content:"";
+        display: block;
+        width: 1px;height:40px;
+        margin:0 6px 15px;
+        background:$nav;
+      }
+      span{opacity: 1;padding-left:27px;}
+    }
+    &:first-child.active a:before{height:0;}
   }
 }

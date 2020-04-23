@@ -190,6 +190,29 @@ body {
   margin: 0 auto;
   padding: 100px 0; }
 
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 200; }
+  header .header-logo {
+    position: relative;
+    left: 60px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin-top: 60px;
+    background: url("../images/logo.png") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    -moz-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    -webkit-transition: opacity 300ms ease;
+    transition: opacity 300ms ease; }
+    header .header-logo:hover {
+      opacity: 0.7; }
+
 .quick-nav {
   position: fixed;
   left: 80px;
@@ -210,12 +233,12 @@ body {
       display: block;
       opacity: 0.5;
       color: #ffffff; }
-      .quick-nav li a:before {
+      .quick-nav li a:after {
         content: "";
         display: block;
-        width: 7px;
-        height: 7px;
-        border: 1px solid #333333;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #ff0226;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -224,12 +247,12 @@ body {
         transform: rotate(45deg); }
       .quick-nav li a span {
         position: absolute;
-        top: -3px;
+        bottom: -5px;
         display: block;
         padding-left: 0;
         opacity: 0;
         white-space: nowrap;
-        color: #333333;
+        color: #ff0226;
         font-size: 15px;
         -moz-transition: all 450ms ease;
         -o-transition: all 450ms ease;
@@ -238,15 +261,22 @@ body {
       .quick-nav li a:hover span {
         padding-left: 27px;
         opacity: 1; }
-      .quick-nav li a.active {
-        opacity: 1; }
-        .quick-nav li a.active:after {
-          content: "";
-          display: block;
-          width: 1px;
-          height: 40px;
-          margin: 15px 3px 0;
-          background: #333333; }
+    .quick-nav li.active a {
+      opacity: 1; }
+      .quick-nav li.active a:after {
+        background: #ff0226; }
+      .quick-nav li.active a:before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 40px;
+        margin: 0 6px 15px;
+        background: #ff0226; }
+      .quick-nav li.active a span {
+        opacity: 1;
+        padding-left: 27px; }
+    .quick-nav li:first-child.active a:before {
+      height: 0; }
 
 footer {
   padding: 60px 0;
@@ -308,7 +338,7 @@ footer {
     padding: 20px 0 30px;
     font-size: 1.7rem; }
   .logo-wrap p {
-    padding-top: 20px;
+    padding: 20px 30px 0 30px;
     font-size: 1.2rem; }
 
 /*]-- portfolio --[*/
@@ -703,6 +733,11 @@ footer {
     background: url("../images/contact-mail.png") no-repeat; }
   #contact .phone:before {
     background: url("../images/contact-phone.png") no-repeat; }
+  #contact h6 {
+    margin-top: 70px;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #cccccc; }
 
 @keyframes typing {
   0% {
