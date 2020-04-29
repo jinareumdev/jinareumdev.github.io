@@ -397,8 +397,7 @@ footer {
     content: "";
     clear: both; }
   .output-list li {
-    width: 33.33%;
-    max-width: 370px;
+    width: calc(100%/3 - 20px);
     margin-right: 30px;
     margin-bottom: 50px;
     float: left; }

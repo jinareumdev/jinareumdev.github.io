@@ -82,7 +82,8 @@
   padding:150px 0 80px;
   @include clearfix;
   li{
-    width: 33.33%;max-width:370px;
+    //width: 33.33%;max-width:370px;
+    width: calc(100%/3 - 20px);
     margin-right: 30px;margin-bottom: 50px;
     float:left;
     &:nth-child(3n){margin-right:0;}
