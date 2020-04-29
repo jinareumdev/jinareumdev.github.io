@@ -181,14 +181,20 @@ body {
   font-weight: 400;
   color: #333333; }
 
+@media (min-width: 0) and (max-width: 990px) {
+  html, body {
+    position: relative;
+    overflow-x: hidden; } }
 .wrap {
   background-color: #212121; }
 
 .container {
   width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 100px 0; }
+  max-width: 1240px;
+  margin: 0 auto; }
+  @media (min-width: 0) and (max-width: 990px) {
+    .container {
+      padding: 0 16px; } }
 
 header {
   position: fixed;

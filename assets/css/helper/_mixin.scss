@@ -19,7 +19,7 @@ $devicePoint:420px;
 
 //breakpoint
 @mixin breakPoint($browser-width) {
-  $tabletPoint: 1100px;
+  $tabletPoint: 1240px;
   $mobilePoint: 990px;
   @if $browser-width == 'mobile' {
     @media (min-width: 0) and (max-width: $mobilePoint) {
