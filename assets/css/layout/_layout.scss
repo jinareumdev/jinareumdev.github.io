@@ -13,8 +13,9 @@ body{
   width: 100%;
   max-width:$content-max-width;
   margin:0 auto;
-  @include breakPoint(talet){
-    padding:0 25px;
+  padding:0 100px;
+  @include breakPoint(tablet){
+    padding:0 30px;
   }
   @include breakPoint(mobile){
     padding:0 16px;

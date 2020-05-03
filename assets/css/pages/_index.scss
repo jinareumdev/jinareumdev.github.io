@@ -187,10 +187,6 @@
       }
     }
   }
-
-  @include breakPoint(mobile){
-    width:33.33%;
-  }
 }
 // 포트폴리오 순서에 따른 화살표 위치
 .output-list li{
@@ -229,7 +225,7 @@
     z-index:15;
   }
   .bg-text{
-    top:40px;left:25%;
+    top:-50px;left:25%;
     font-size:100px;
   }
 }

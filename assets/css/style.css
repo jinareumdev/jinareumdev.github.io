@@ -191,7 +191,11 @@ body {
 .container {
   width: 100%;
   max-width: 1240px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 100px; }
+  @media (min-width: 991px) and (max-width: 1240px) {
+    .container {
+      padding: 0 30px; } }
   @media (min-width: 0) and (max-width: 990px) {
     .container {
       padding: 0 16px; } }
@@ -527,9 +531,6 @@ footer {
       transform: rotate(90deg); }
       .output-list li.active .plus span:nth-child(2) {
         opacity: 0; }
-  @media (min-width: 0) and (max-width: 990px) {
-    .output-list {
-      width: 33.33%; } }
 
 .output-list li:nth-child(3n+1) .output-bio:before {
   left: 12.5%; }
@@ -558,7 +559,7 @@ footer {
     position: relative;
     z-index: 15; }
   #profile .bg-text {
-    top: 40px;
+    top: -50px;
     left: 25%;
     font-size: 100px; }
 
@@ -756,5 +757,8 @@ footer {
     opacity: 1; }
   100% {
     opacity: 0; } }
+@media (min-width: 991px) and (max-width: 1240px) {
+  .quick-nav, .header-logo {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
