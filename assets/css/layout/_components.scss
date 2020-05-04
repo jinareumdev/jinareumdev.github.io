@@ -36,6 +36,7 @@
 // button
 .menu-btn{
   position: fixed;top:0;left:0;
+  display: none;
   width: 445px;height:208px;
   @include transition(all 500ms ease);
   z-index:100;
@@ -47,9 +48,13 @@
     @include prefix(transform, skew(-65deg), webkit ms);
   }
   > button{
-    position: relative; top:56px;left:80px;
-    width: 34px;height:30px;
+    position: relative; top:37px;left:60px;
+    display: block;
+    width: 34px;
     cursor: pointer;
+    .menutxt{
+      font-size:13px;
+    }
     .bar{
       position: relative;
       display: block;

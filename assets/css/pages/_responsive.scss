@@ -3,8 +3,13 @@
 //===========================================================
 // Layout : tablet;
 //===========================================================
-@include breakPoint(1400px){
-  .quick-nav, .header-logo{display:none;}
+@include mediaQuery(1400px){
+  // header
+  .quick-nav, .header-logo{display:none!important;}
+  .menu-btn{
+    display:block;
+    &:before{width:81%;max-width:363px;}
+  }
 }
 
 

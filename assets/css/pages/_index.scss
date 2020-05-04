@@ -26,9 +26,18 @@
   }
 
 }
-.logo-wrap{
-  position: absolute;@include vertical();
-  width:100%;
+.logo-inner{
+  //position: absolute;@include vertical();
+  @at-root .logo-wrap{
+    position: absolute;top:0;
+    display: table;
+    width: 100%;height:100vh;
+    z-index:3;
+  }
+  display: table-cell;
+  width:100%;height:auto;
+  margin:0 auto;
+  vertical-align: middle;
   text-align: center;color:$white;
   h1{font-size:4rem;}
   h4{padding:20px 0 30px;font-size:1.7rem;}
@@ -314,7 +323,8 @@
       dt{margin-bottom:0;}
     }
   }
-}.resume{
+}
+.resume{
    position: relative;
    display: block;
    width: 100%;height:60px;

@@ -20,25 +20,28 @@ $devicePoint:420px;
 //breakpoint
 @mixin breakPoint($browser-width) {
   $tabletPoint: 1240px;
-  $mobilePoint: 990px;
-  @if $browser-width == 'mobile' {
+  $mobilePoint: 660px;
+  @if $browser-width == 'mobile' { // 0 ~ 660px
     @media (min-width: 0) and (max-width: $mobilePoint) {
       @content;
     }
-  } @else if $browser-width == 'tablet' {
+  } @else if $browser-width == 'tablet' { // 661 ~ 1240px
     @media (min-width: ($mobilePoint + 1px)) and (max-width: $tabletPoint) {
       @content;
     }
-  } @else if $browser-width == 'pc' {
+  } @else if $browser-width == 'pc' { // 1241px ~
     @media screen and (min-width: ($tabletPoint + 1px)) {
-      @content;
-    }
-  } @else if $browser-width == 'all'{
-    @media screen and (min-width:1300px){
       @content;
     }
   }
 }
+/*]-- media Query --[*/
+@mixin mediaQuery($point:null, $minpoint:0px){
+  @media all and ( min-width: #{$minpoint} ) and ( max-width: #{$point} ) {
+    @content;
+  }
+}
+
 /*]-- keyframes / animation --[*/
 @mixin keyframe($name) {
   @-webkit-keyframes #{$name} {

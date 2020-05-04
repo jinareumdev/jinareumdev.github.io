@@ -40,9 +40,9 @@ $(document).ready(function () {
         var visualHeight = $contents.eq(1).offset().top - 300;
         (function mainNav() {
             if ($(this).scrollTop() > visualHeight) {
-                $(".quick-nav").fadeIn();
+                $(".quick-nav").addClass("on");
             } else {
-                $(".quick-nav").fadeOut(100);
+                $(".quick-nav").removeClass("on");
             }
         })();
     });
