@@ -11,17 +11,20 @@
 
 /*]-- breakpoint --[*/
 $tablePoint:1240px;
-$tableVerticalPoint:768px;
+$tableVerticalPoint:780px;
+$mobilePoint: 660px;
 $tableMargin:24px;
-$mobilePoint:680px;
 $mobileMargin:20px;
 $devicePoint:420px;
 
 //breakpoint
 @mixin breakPoint($browser-width) {
   $tabletPoint: 1240px;
-  $mobilePoint: 660px;
-  @if $browser-width == 'mobile' { // 0 ~ 660px
+  @if $browser-width == 'device' { // 0 ~ 420px
+    @media (min-width: 0) and (max-width: $devicePoint) {
+      @content;
+    }
+  } @else if $browser-width == 'mobile' { // 421 ~ 660px
     @media (min-width: 0) and (max-width: $mobilePoint) {
       @content;
     }

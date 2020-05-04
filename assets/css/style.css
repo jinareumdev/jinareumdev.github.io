@@ -115,7 +115,6 @@
   left: 0;
   display: none;
   width: 445px;
-  height: 208px;
   -moz-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
@@ -128,17 +127,18 @@
     left: -223px;
     display: block;
     width: 100%;
-    height: 100%;
+    height: 208px;
     background: #ffffff;
     -webkit-transform: skew(-65deg);
     -ms-transform: skew(-65deg);
     transform: skew(-65deg); }
   .menu-btn > button {
     position: relative;
-    top: 37px;
-    left: 60px;
+    top: 23px;
+    left: 50px;
     display: block;
-    width: 34px;
+    width: 45px;
+    height: 50px;
     cursor: pointer; }
     .menu-btn > button .menutxt {
       font-size: 13px; }
@@ -356,6 +356,7 @@ footer {
     display: table;
     width: 100%;
     height: 100vh;
+    padding: 0 20px;
     z-index: 3; }
   .logo-inner h1 {
     font-size: 4rem; }
@@ -417,13 +418,8 @@ footer {
     clear: both; }
   .output-list li {
     width: calc(100%/3 - 20px);
-    margin-right: 30px;
     margin-bottom: 50px;
     float: left; }
-    .output-list li:nth-child(3n) {
-      margin-right: 0; }
-    .output-list li:nth-child(3n-2) {
-      clear: left; }
     .output-list li h3 {
       font-size: 1.5rem;
       line-height: 2rem;
@@ -575,7 +571,7 @@ footer {
     z-index: 15; }
   #profile .bg-text {
     top: -50px;
-    left: 25%;
+    left: 20vw;
     font-size: 100px; }
 
 .profile-title h2 {
@@ -667,7 +663,7 @@ footer {
     position: absolute;
     top: 50%;
     right: 20px;
-    width: 40%;
+    width: calc(100% - 200px);
     height: 1px;
     background: #212121; }
   .resume:hover {
@@ -772,6 +768,13 @@ footer {
     opacity: 1; }
   100% {
     opacity: 0; } }
+@media (min-width: 900px) {
+  .output-list li {
+    margin-right: 30px; }
+    .output-list li:nth-child(3n) {
+      margin-right: 0; }
+    .output-list li:nth-child(3n-2) {
+      clear: left; } }
 @media all and (min-width: 0px) and (max-width: 1400px) {
   .quick-nav, .header-logo {
     display: none !important; }
@@ -780,6 +783,77 @@ footer {
     display: block; }
     .menu-btn:before {
       width: 81%;
-      max-width: 363px; } }
+      max-width: 363px; }
+
+  .profile-list {
+    flex-wrap: wrap-reverse;
+    align-items: end;
+    margin-top: 70px; }
+    .profile-list .list-wrap {
+      width: calc(100%/2 - 20px); }
+      .profile-list .list-wrap:nth-child(2), .profile-list .list-wrap:nth-child(3) {
+        margin-top: 0; }
+    .profile-list .column {
+      margin-bottom: 30px; } }
+@media all and (min-width: 0px) and (max-width: 780px) {
+  #profile .bg-text {
+    top: -40px;
+    left: 2vw;
+    font-size: 80px; } }
+@media all and (min-width: 0px) and (max-width: 660px) {
+  .menu-btn:before {
+    width: 70%; }
+
+  .logo-inner h1 {
+    font-size: 2.9rem; }
+  .logo-inner h4 {
+    font-size: 1.4rem;
+    padding: 25px 0; }
+  .logo-inner p {
+    font-size: 1rem;
+    padding: 15px 10px 0 10px;
+    line-height: 1.6; }
+
+  .portfolio-title {
+    max-width: 100%; }
+    .portfolio-title:before, .portfolio-title:after {
+      display: none; }
+    .portfolio-title h2 {
+      font-size: 2.6rem; }
+    .portfolio-title h3 {
+      font-size: 1.7rem;
+      line-height: 1.3;
+      margin: 40px 0 25px; }
+
+  .profile-title h2 {
+    font-size: 2.6rem; }
+  .profile-title h3 {
+    font-size: 1.4rem; }
+
+  .profile-list .list-wrap {
+    width: 100%; }
+
+  #contact {
+    padding-top: 250px; }
+    #contact .contact-bg {
+      top: -350px; }
+    #contact .contact {
+      margin-top: 30px; }
+    #contact .notice {
+      font-size: 1.3rem;
+      line-height: 1.4; }
+    #contact a, #contact p {
+      font-size: 1.4rem; }
+    #contact h6 {
+      font-size: 1.2rem; } }
+@media all and (min-width: 0px) and (max-width: 900px) {
+  .output-list li {
+    width: calc(100%/2 - 10px); }
+    .output-list li:nth-child(2n-1) {
+      margin-right: 20px;
+      clear: left; } }
+@media (min-width: 0) and (max-width: 420px) {
+  .output-list li {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

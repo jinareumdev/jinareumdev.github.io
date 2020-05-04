@@ -1,18 +1,87 @@
 @charset "utf-8";
 // 해당 사이트의 반응형 관리하는 페이지
 //===========================================================
-// Layout : tablet;
+// Layout : PC;
 //===========================================================
-@include mediaQuery(1400px){
+@media (min-width:900px){ // 901px ~
+  // 포르폴리오 리스트
+  .output-list li{
+    margin-right: 30px;
+    &:nth-child(3n){margin-right:0;}
+    &:nth-child(3n-2){clear:left;}
+  }
+}
+@include mediaQuery(1400px){ // 1400px ~
   // header
   .quick-nav, .header-logo{display:none!important;}
   .menu-btn{
     display:block;
     &:before{width:81%;max-width:363px;}
   }
+  // profile
+  .profile-list{
+    flex-wrap:wrap-reverse;align-items:end;
+    margin-top: 70px;
+    .list-wrap{
+      width:calc(100%/2 - 20px);
+      &:nth-child(2),&:nth-child(3){margin-top:0;}
+    }
+    .column{margin-bottom:30px;}
+  }
 }
-
+//===========================================================
+// Layout : tablet;
+//===========================================================
+@include mediaQuery($tableVerticalPoint){
+  // 프로필
+  #profile .bg-text{top:-40px;left:2vw;font-size:80px;}
+}
 
 //===========================================================
 //  Layout : mobile
 //===========================================================
+@include mediaQuery($mobilePoint){
+  // header
+  .menu-btn:before{width:70%;}
+  // main visual
+  .logo-inner{
+    h1{font-size:2.9rem;}
+    h4{font-size:1.4rem;padding:25px 0;}
+    p{font-size:1rem; padding:15px 10px 0 10px;line-height: 1.6;}
+  }
+  // portfolio
+  .portfolio-title{
+    max-width:100%;
+    &:before,&:after{display:none;}
+    h2{font-size:2.6rem;}
+    h3{font-size:1.7rem;line-height:1.3;margin:40px 0 25px;}
+  }
+  //profile
+  .profile-title{
+    h2{font-size:2.6rem;}
+    h3{font-size:1.4rem;}
+  }
+  .profile-list{
+    .list-wrap{width:100%;}
+  }
+  #contact{
+    padding-top: 250px;
+    .contact-bg{top:-350px;}
+    .contact{margin-top:30px;}
+    .notice{font-size:1.3rem;line-height:1.4;}
+    a,p{font-size:1.4rem;}
+    h6{font-size:1.2rem;}
+  }
+}
+@include mediaQuery(900px){ // 421px ~ 900px
+  .output-list li{
+    width:calc(100%/2 - 10px);
+    &:nth-child(2n-1){margin-right:20px;clear:left;}
+  }
+ }
+
+@include breakPoint(device){
+  .output-list li{
+    width:100%;
+  }
+}

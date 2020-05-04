@@ -53,9 +53,9 @@ $(document).ready(function () {
             bio = layout.find(".output-bio"),
             bioHeight = bio.outerHeight() + 35;
         if( $(layout).hasClass("active") ){
-            $(layout).removeClass("active").css("margin-bottom", "0");
+            $(layout).removeClass("active").css("margin-bottom", "50px");
         } else {
-            $('.list-item').removeClass("active").css("margin-bottom", "0");
+            $('.list-item').removeClass("active").css("margin-bottom", "50px");
             $(layout).addClass("active").css("margin-bottom", bioHeight + "px");
         }
         return false;
