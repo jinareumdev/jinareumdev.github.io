@@ -60,5 +60,15 @@ $(document).ready(function () {
         }
         return false;
     });
+    // mobile gnb
+    var $menu = $("#mob-menu");
+    $menu.click(function () {
+        console.log("menu");
+        $(".menu-btn").addClass("none");
+        $(".sidebar").addClass("toggle");
+        $(".main-panel").addClass("toggle");
+        $(".sidebar-dim").addClass("visible");
+
+    });
 
 });

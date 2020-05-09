@@ -1,91 +1,928 @@
-/*
-Error: Mixin prefix takes 3 arguments but 5 were passed.
-        on line 106 of layout/_header.scss, in `prefix'
-        from line 106 of layout/_header.scss
-        from line 19 of style.scss
+@charset "UTF-8";
+/* --------------------
+ * Last Modified: 2020-04
+ * Author: Jinareum (jinareum.76@gmail.com)
+ * Description: jinareum
+ -------------------- */
+@import url(base/normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@font-face {
+  font-family: Noto;
+  font-weight: 400;
+  src: url("../font/NotoSansKR-Regular-Hestia.eot");
+  src: url("../font/NotoSansKR-Regular-Hestia.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Regular-Hestia.woff") format("woff"), url("../font/NotoSansKR-Regular-Hestia.otf") format("opentype"), url("../font/NotoSansKR-Regular-Hestia.ttf") format("truetype"); }
+@font-face {
+  font-family: Noto;
+  font-weight: 500;
+  src: url("../font/NotoSansKR-Medium-Hestia.eot");
+  src: url("../font/NotoSansKR-Medium-Hestia.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Medium-Hestia.woff") format("woff"), url("../font/NotoSansKR-Medium-Hestia.otf") format("opentype"), url("../font/NotoSansKR-Medium-Hestia.ttf") format("truetype"); }
+@font-face {
+  font-family: Noto;
+  font-weight: 700;
+  src: url("../font/NotoSansKR-Bold-Hestia.eot");
+  src: url("../font/NotoSansKR-Bold-Hestia.eot?#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Bold-Hestia.woff") format("woff"), url("../font/NotoSansKR-Bold-Hestia.otf") format("opentype"), url("../font/NotoSansKR-Bold-Hestia.ttf") format("truetype"); }
+@font-face {
+  font-family: Lato;
+  font-weight: 400;
+  src: url("../font/Lato-Regular.eot");
+  src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.otf") format("opentype"), url("../font/Lato-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: Lato;
+  font-weight: 700;
+  src: url("../font/Lato-Bold.eot");
+  src: url("../font/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Bold.woff") format("woff"), url("../font/Lato-Bold.otf") format("opentype"), url("../font/Lato-Bold.ttf") format("truetype"); }
+/*]-- body default font --[*/
+/*]-- breakpoint --[*/
+/*]-- media Query --[*/
+/*]-- keyframes / animation --[*/
+/*]-- util --[*/
+/*]-- border / boxs --[*/
+/*] -- transition --[*/
+/*]-- vender prefix --[*/
+/*]-- position --[*/
+/*]-- 말 줄임 --[*/
+/*]-- 여백제거 --[*/
+/*]-- 색상 --[*/
+/*]-- 이미지 경로 --[*/
+/*]-- 폰트 --[*/
+.top {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  right: 20px;
+  bottom: 120px;
+  background: url("../images/top.png") no-repeat #cccccc;
+  background-position: center center;
+  z-index: 100;
+  cursor: pointer;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out; }
 
-Backtrace:
-layout/_header.scss:106:in `prefix'
-layout/_header.scss:106
-style.scss:19
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:59:in `perform_arguments'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:362:in `block in visit_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:329:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Mixin prefix takes 3 arguments but 5 were passed.\A         on line 106 of layout/_header.scss, in `prefix'\A         from line 106 of layout/_header.scss\A         from line 19 of style.scss"; }
+.mouse {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 37px;
+  margin: 0 auto;
+  border: 2px solid #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px; }
+  .mouse:after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 2px);
+    top: 25%;
+    width: 4px;
+    height: 9px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    -webkit-animation: wheel 800ms ease-in-out infinite;
+    -o-animation: wheel 800ms ease-in-out infinite;
+    animation: wheel 800ms ease-in-out infinite; }
+
+@-webkit-keyframes wheel {
+  0% {
+    transform: translate(0, 5px); }
+  50% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(0, 5px); } }
+@-moz-keyframes wheel {
+  0% {
+    transform: translate(0, 5px); }
+  50% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(0, 5px); } }
+@keyframes wheel {
+  0% {
+    transform: translate(0, 5px); }
+  50% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(0, 5px); } }
+.menu-btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 445px;
+  height: 200px;
+  -moz-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  z-index: 100; }
+  .menu-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -223px;
+    display: block;
+    width: 100%;
+    height: 208px;
+    background: #ffffff;
+    -webkit-transform: skew(-65deg);
+    -ms-transform: skew(-65deg);
+    transform: skew(-65deg); }
+  .menu-btn > button {
+    position: relative;
+    top: 23px;
+    left: 50px;
+    display: block;
+    width: 45px;
+    height: 50px;
+    cursor: pointer; }
+    .menu-btn > button .menutxt {
+      font-size: 13px; }
+    .menu-btn > button .bar {
+      position: relative;
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: #000000;
+      -moz-transition: width 300ms;
+      -o-transition: width 300ms;
+      -webkit-transition: width 300ms;
+      transition: width 300ms; }
+      .menu-btn > button .bar:before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 32px;
+        height: 100%;
+        background: #000000;
+        -moz-transition: width 300ms;
+        -o-transition: width 300ms;
+        -webkit-transition: width 300ms;
+        transition: width 300ms; }
+    .menu-btn > button:hover .bar {
+      width: 100%; }
+      .menu-btn > button:hover .bar:before {
+        width: 100%; }
+
+.caution {
+  font-size: 13px;
+  color: #cccccc; }
+
+.bg-text {
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  color: #999999;
+  opacity: 0.2;
+  z-index: 2; }
+
+body {
+  font-family: Lato , Noto , "맑은고딕", Dotum, "돋움", Gulim, "굴림" , sans-serif;
+  font-weight: 400;
+  color: #333333; }
+
+@media (min-width: 0) and (max-width: 660px) {
+  html, body {
+    position: relative;
+    overflow-x: hidden; } }
+.wrap {
+  background-color: #212121; }
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 100px; }
+  @media (min-width: 661px) and (max-width: 1240px) {
+    .container {
+      padding: 0 30px; } }
+  @media (min-width: 0) and (max-width: 660px) {
+    .container {
+      padding: 0 16px; } }
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 200; }
+  header .header-logo {
+    position: relative;
+    left: 60px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin-top: 60px;
+    background: url("../images/logo.png") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    -moz-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    -webkit-transition: opacity 300ms ease;
+    transition: opacity 300ms ease; }
+    header .header-logo:hover {
+      opacity: 0.7; }
+
+.quick-nav {
+  position: fixed;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  z-index: 10; }
+  .quick-nav li {
+    display: block;
+    margin-bottom: 15px; }
+    .quick-nav li:last-child {
+      margin-bottom: 0; }
+    .quick-nav li a {
+      position: relative;
+      display: block;
+      opacity: 0.5;
+      color: #ffffff; }
+      .quick-nav li a:after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #ff0226;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .quick-nav li a span {
+        position: absolute;
+        bottom: -5px;
+        display: block;
+        padding-left: 0;
+        opacity: 0;
+        white-space: nowrap;
+        color: #ff0226;
+        font-size: 15px;
+        -moz-transition: all 450ms ease;
+        -o-transition: all 450ms ease;
+        -webkit-transition: all 450ms ease;
+        transition: all 450ms ease; }
+      .quick-nav li a:hover span {
+        padding-left: 27px;
+        opacity: 1; }
+    .quick-nav li.active a {
+      opacity: 1; }
+      .quick-nav li.active a:after {
+        background: #ff0226; }
+      .quick-nav li.active a:before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 40px;
+        margin: 0 6px 15px;
+        background: #ff0226; }
+      .quick-nav li.active a span {
+        opacity: 1;
+        padding-left: 27px; }
+    .quick-nav li:first-child.active a:before {
+      height: 0; }
+  .quick-nav.on {
+    display: block; }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  width: 250px;
+  height: 100vh;
+  background: #ffffff;
+  visibility: visible;
+  overflow-y: visible;
+  transform: translate3d(-250px, 0, 0);
+  -moz-transition: all 330ms cubic-bezier(0.685, 0.0473, 0.346, 1) 0s;
+  -o-transition: all 330ms cubic-bezier(0.685, 0.0473, 0.346, 1) 0s;
+  -webkit-transition: all 330ms cubic-bezier(0.685, 0.0473, 0.346, 1) 0s;
+  transition: all 330ms cubic-bezier(0.685, 0.0473, 0.346, 1) 0s;
+  background: #ffffff;
+  border: 1px solid #D0D0DE;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 1000; }
+  .sidebar .side-close {
+    position: absolute;
+    display: none;
+    width: 28px;
+    height: 28px;
+    background: url("../images/close-btn.png") center center no-repeat;
+    z-index: -1;
+    cursor: pointer; }
+
+.sidebar-dim {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1) 0s; }
+
+footer {
+  padding: 60px 0;
+  background: #ffffff;
+  font-size: 1.3rem;
+  text-align: center; }
+
+/*]-- visual --[*/
+#visual {
+  height: 100vh;
+  overflow: hidden; }
+
+.video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: url("../images/video-default.png") no-repeat;
+  background-size: cover; }
+  .video-wrap {
+    position: relative;
+    height: 100vh; }
+  .video:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(33, 33, 33, 0.6); }
+  .video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.6; }
+
+.logo-inner {
+  display: table-cell;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff; }
+  .logo-wrap {
+    position: absolute;
+    top: 0;
+    display: table;
+    width: 100%;
+    height: 100vh;
+    padding: 0 20px;
+    z-index: 3; }
+  .logo-inner h1 {
+    font-size: 4rem; }
+  .logo-inner h4 {
+    padding: 20px 0 30px;
+    font-size: 1.7rem; }
+  .logo-inner p {
+    padding: 20px 30px 0 30px;
+    font-size: 1.2rem; }
+
+/*]-- portfolio --[*/
+#portfolio {
+  padding-bottom: 150px;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: #212121; }
+
+.portfolio-title {
+  position: relative;
+  max-width: 65%;
+  margin: 0 auto;
+  padding-top: 100px;
+  text-align: right; }
+  .portfolio-title:after, .portfolio-title:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #ffffff; }
+  .portfolio-title:before {
+    right: -50px;
+    top: 137px;
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+  .portfolio-title:after {
+    top: 139px;
+    left: calc(100% + 50px);
+    width: 60%;
+    height: 1px;
+    opacity: 0.3; }
+  .portfolio-title h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem; }
+  .portfolio-title h3 {
+    font-size: 2.3rem;
+    line-height: 2.3; }
+  .portfolio-title p {
+    font-size: 20px;
+    line-height: 1.7; }
+
+.output-list {
+  position: relative;
+  padding: 150px 0 80px; }
+  .output-list::after {
+    display: block;
+    content: "";
+    clear: both; }
+  .output-list li {
+    width: calc(100%/3 - 20px);
+    margin-bottom: 50px;
+    float: left; }
+    .output-list li h3 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: #ffffff; }
+    .output-list li > p {
+      line-height: 1.5rem;
+      color: #999999;
+      font-weight: 700; }
+    .output-list li p {
+      font-size: 1rem; }
+    .output-list li .photo-wrap {
+      position: relative;
+      overflow: hidden;
+      margin: 0 0 15px;
+      cursor: pointer; }
+      .output-list li .photo-wrap img {
+        display: block;
+        height: auto;
+        opacity: 0.6;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -moz-transition: all 400ms ease-in-out;
+        -o-transition: all 400ms ease-in-out;
+        -webkit-transition: all 400ms ease-in-out;
+        transition: all 400ms ease-in-out; }
+      .output-list li .photo-wrap:hover img {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }
+      .output-list li .photo-wrap span {
+        position: absolute;
+        display: block; }
+      .output-list li .photo-wrap .corner {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100px;
+        height: 100px;
+        z-index: 3; }
+      .output-list li .photo-wrap .triangle {
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-width: 0 0 100px 100px;
+        border-color: transparent transparent #ffffff transparent;
+        border-style: solid; }
+      .output-list li .photo-wrap .plus {
+        bottom: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px; }
+        .output-list li .photo-wrap .plus span {
+          opacity: 1;
+          background: #666666;
+          -webkit-transform: 0deg;
+          -ms-transform: 0deg;
+          transform: 0deg;
+          -moz-transition: all 500ms ease;
+          -o-transition: all 500ms ease;
+          -webkit-transition: all 500ms ease;
+          transition: all 500ms ease; }
+          .output-list li .photo-wrap .plus span:nth-child(1) {
+            top: 0;
+            left: 13px;
+            bottom: 0;
+            width: 6px;
+            height: 32px; }
+          .output-list li .photo-wrap .plus span:nth-child(2) {
+            top: 13px;
+            left: 0;
+            right: 0;
+            width: 32px;
+            height: 6px; }
+    .output-list li .output-bio {
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: none;
+      width: 100%;
+      margin: 25px 0;
+      padding: 40px 30px 20px;
+      background: linear-gradient(45deg, #333333 0%, #444444 50%, #837d7c 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#837d7c',GradientType=1 );
+      color: #ffffff;
+      z-index: 3; }
+      .output-list li .output-bio:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 37.5px 0 37.5px;
+        border-color: #212121 transparent transparent transparent; }
+      .output-list li .output-bio p:nth-child(1) {
+        font-size: 1.24rem;
+        line-height: 1.6; }
+      .output-list li .output-bio p:nth-child(2) {
+        padding-top: 10px;
+        line-height: 2; }
+      .output-list li .output-bio a {
+        display: block;
+        width: 35px;
+        height: 35px;
+        margin-top: 15px;
+        background: url("../images/link.png") 50% 50% no-repeat;
+        font-size: 0; }
+    .output-list li.active .output-bio {
+      display: block; }
+    .output-list li.active .triangle {
+      border-color: transparent transparent #666666 transparent; }
+    .output-list li.active .plus span {
+      background: #ffffff;
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
+      .output-list li.active .plus span:nth-child(2) {
+        opacity: 0; }
+
+.output-list li:nth-child(3n+1) .output-bio:before {
+  left: 12.5%; }
+.output-list li:nth-child(3n+2) .output-bio:before {
+  left: 47.5%; }
+.output-list li:nth-child(3n+3) .output-bio:before {
+  left: 82.5%; }
+
+/*]-- profile --[*/
+#profile {
+  position: relative; }
+  #profile:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%; }
+  #profile:before {
+    top: 0;
+    height: 90%;
+    -webkit-transform: skew(0, 20deg);
+    -ms-transform: skew(0, 20deg);
+    transform: skew(0, 20deg);
+    z-index: 2;
+    background: #ffffff; }
+  #profile .container {
+    position: relative;
+    z-index: 15; }
+  #profile .bg-text {
+    top: -50px;
+    left: 20vw;
+    font-size: 100px; }
+
+.profile-title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.4rem;
+  line-height: 2; }
+.profile-title h3 {
+  font-size: 1.7rem; }
+.profile-title p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6; }
+
+.profile-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 150px; }
+  .profile-list .list-wrap {
+    position: relative;
+    width: calc(100%/3 - 20px); }
+    .profile-list .list-wrap:nth-child(3) {
+      margin-top: -230px; }
+    .profile-list .list-wrap:nth-child(2) {
+      margin-top: -95px; }
+  .profile-list .column {
+    height: 100%;
+    padding: 20px;
+    margin-bottom: 50px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.2); }
+    .profile-list .column dl dt {
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 2; }
+    .profile-list .column dl dd {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      line-height: 1.7; }
+      .profile-list .column dl dd:last-child {
+        margin-bottom: 0; }
+      .profile-list .column dl dd span {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 700; }
+      .profile-list .column dl dd p {
+        margin-bottom: 15px; }
+        .profile-list .column dl dd p:last-child {
+          margin-bottom: 0; }
+    .profile-list .column .skill::after {
+      display: block;
+      content: "";
+      clear: both; }
+    .profile-list .column .skill dt {
+      font-size: 1.6rem;
+      font-weight: 700; }
+    .profile-list .column .skill dd {
+      float: left;
+      margin-right: 29px;
+      margin-bottom: 15px; }
+      .profile-list .column .skill dd:nth-child(4) {
+        margin-right: 0; }
+    .profile-list .column .skill-detail {
+      margin-top: 20px; }
+      .profile-list .column .skill-detail dt {
+        margin-bottom: 0; }
+
+.resume {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  line-height: 58px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #212121;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .resume:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: calc(100% - 200px);
+    height: 1px;
+    background: #212121; }
+  .resume:hover {
+    border-color: #999999; }
+    .resume:hover:before {
+      background: #999999; }
+
+/*]-- contact --[*/
+#contact {
+  position: relative;
+  height: 95vh;
+  padding-top: 200px;
+  background: #f6f8f9; }
+  #contact .contact-bg {
+    position: absolute;
+    top: -540px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background: url("../images/contact-bg.jpg") #ffffff no-repeat;
+    background-position-x: 0; }
+    #contact .contact-bg:after {
+      content: "";
+      position: absolute;
+      top: 60%;
+      width: 100%;
+      height: 65%;
+      -webkit-transform: skew(0, -13deg);
+      transform: skew(0, -13deg);
+      background: #f6f8f9; }
+  #contact .container {
+    position: relative;
+    text-align: right;
+    padding-bottom: 0; }
+  #contact h2 {
+    position: relative;
+    display: inline-block;
+    padding-right: 5px;
+    overflow: hidden;
+    font-family: "Playfair Display", serif;
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
+    animation: typing 3.5s steps(40, end); }
+    #contact h2:after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 20px;
+      height: 100%;
+      top: 3px;
+      right: 0;
+      border-right: 1px solid #000;
+      animation: cursor 0.5s step-end infinite; }
+  #contact p {
+    font-size: 1.2rem;
+    line-height: 1.5; }
+    #contact p:last-child {
+      margin-bottom: 0; }
+  #contact .contact {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px; }
+    #contact .contact:before {
+      content: "";
+      position: absolute;
+      left: -34px;
+      top: -2px;
+      width: 30px;
+      height: 30px; }
+    #contact .contact:nth-child(1) {
+      margin-top: 20px; }
+  #contact a {
+    font-size: 1.3rem; }
+    #contact a:before {
+      content: "";
+      background: url("../images/contact-github.png") no-repeat; }
+  #contact .notice {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    line-height: 1.6; }
+  #contact .email:before {
+    background: url("../images/contact-mail.png") no-repeat; }
+  #contact .phone:before {
+    background: url("../images/contact-phone.png") no-repeat; }
+  #contact h6 {
+    margin-top: 70px;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #cccccc; }
+
+@keyframes typing {
+  0% {
+    width: 0; }
+  100% {
+    width: 230px; } }
+@keyframes cursor {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@media (min-width: 900px) {
+  .output-list li {
+    margin-right: 30px; }
+    .output-list li:nth-child(3n) {
+      margin-right: 0; }
+    .output-list li:nth-child(3n-2) {
+      clear: left; } }
+@media all and (min-width: 0px) and (max-width: 1400px) {
+  .quick-nav, .header-logo {
+    display: none !important; }
+
+  .menu-btn {
+    display: block; }
+    .menu-btn:before {
+      width: 81%;
+      max-width: 363px; }
+
+  .profile-list {
+    flex-wrap: wrap-reverse;
+    align-items: end;
+    margin-top: 70px; }
+    .profile-list .list-wrap {
+      width: calc(100%/2 - 20px); }
+      .profile-list .list-wrap:nth-child(2), .profile-list .list-wrap:nth-child(3) {
+        margin-top: 0; }
+    .profile-list .column {
+      margin-bottom: 30px; }
+
+  /*] -- tablet 부터 나오는 네비게이션 -- [*/
+  .menu-btn.none {
+    opacity: 0;
+    z-index: -1; }
+
+  .main-panel {
+    width: 100%;
+    transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1) 0s; }
+    .main-panel.toggle {
+      transform: translate3d(250px, 0, 0); }
+
+  .sidebar.toggle {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+    .sidebar.toggle .side-close {
+      top: 22px;
+      right: -45px;
+      display: block;
+      z-index: 99; }
+
+  .sidebar-dim.visible {
+    opacity: 1;
+    z-index: 1000; } }
+@media all and (min-width: 0px) and (max-width: 780px) {
+  #profile .bg-text {
+    top: -40px;
+    left: 2vw;
+    font-size: 80px; } }
+@media all and (min-width: 0px) and (max-width: 660px) {
+  .menu-btn:before {
+    width: 70%; }
+
+  .logo-inner h1 {
+    font-size: 2.9rem; }
+  .logo-inner h4 {
+    font-size: 1.4rem;
+    padding: 25px 0; }
+  .logo-inner p {
+    font-size: 1rem;
+    padding: 15px 10px 0 10px;
+    line-height: 1.6; }
+
+  .portfolio-title {
+    max-width: 100%; }
+    .portfolio-title:before, .portfolio-title:after {
+      display: none; }
+    .portfolio-title h2 {
+      font-size: 2.6rem; }
+    .portfolio-title h3 {
+      font-size: 1.7rem;
+      line-height: 1.3;
+      margin: 40px 0 25px; }
+
+  .profile-title h2 {
+    font-size: 2.6rem; }
+  .profile-title h3 {
+    font-size: 1.4rem; }
+
+  .profile-list .list-wrap {
+    width: 100%; }
+
+  #contact {
+    padding-top: 250px; }
+    #contact .contact-bg {
+      top: -350px; }
+    #contact .contact {
+      margin-top: 30px; }
+    #contact .notice {
+      font-size: 1.3rem;
+      line-height: 1.4; }
+    #contact a, #contact p {
+      font-size: 1.4rem; }
+    #contact h6 {
+      font-size: 1.2rem; } }
+@media all and (min-width: 0px) and (max-width: 900px) {
+  .output-list li {
+    width: calc(100%/2 - 10px); }
+    .output-list li:nth-child(2n-1) {
+      margin-right: 20px;
+      clear: left; } }
+@media (min-width: 0) and (max-width: 420px) {
+  .output-list li {
+    width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */

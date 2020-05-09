@@ -37,7 +37,7 @@
 .menu-btn{
   position: fixed;top:0;left:0;
   display: none;
-  width: 445px;
+  width: 445px;height:200px;
   @include transition(all 500ms ease);
   z-index:100;
   &:before{

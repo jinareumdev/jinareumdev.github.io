@@ -28,6 +28,37 @@
     }
     .column{margin-bottom:30px;}
   }
+
+
+  /*] -- tablet 부터 나오는 네비게이션 -- [*/
+  // 메뉴버튼
+  .menu-btn.none{opacity:0;z-index:-1;}
+  .main-panel{
+    width:100%;
+    transition:all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1) 0s;
+    &.toggle{
+      transform:translate3d(250px, 0, 0);
+    }
+  }
+  // side bar
+  .sidebar.toggle{
+    transform:translate3d(0, 0, 0);
+    box-shadow:0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+    // 닫기버튼
+    .side-close{
+      top:22px;right:-45px;
+      display: block;
+      z-index:99;
+    }
+  }
+  // dim
+  .sidebar-dim.visible{
+    opacity:1;
+    z-index:1000;
+  }
+}
+@media all and (max-width:$menuPoint){
+
 }
 //===========================================================
 // Layout : tablet;
