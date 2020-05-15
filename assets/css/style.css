@@ -642,10 +642,6 @@ footer {
   .profile-list .list-wrap {
     position: relative;
     width: calc(100%/3 - 20px); }
-    .profile-list .list-wrap:nth-child(3) {
-      margin-top: -230px; }
-    .profile-list .list-wrap:nth-child(2) {
-      margin-top: -95px; }
   .profile-list .column {
     height: 100%;
     padding: 20px;
@@ -838,6 +834,12 @@ footer {
       width: calc(100%/2 - 20px); }
       .profile-list .list-wrap:nth-child(2), .profile-list .list-wrap:nth-child(3) {
         margin-top: 0; }
+    .profile-list .personal {
+      display: flex;
+      width: 100%;
+      justify-content: space-between; }
+      .profile-list .personal .column {
+        width: calc(50% - 20px); }
     .profile-list .column {
       margin-bottom: 30px; }
 

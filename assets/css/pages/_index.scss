@@ -266,8 +266,8 @@
   .list-wrap{
     position: relative;
     width: calc(100%/3 - 20px);
-    &:nth-child(3){margin-top:-230px;}
-    &:nth-child(2){margin-top:-95px;}
+    //&:nth-child(3){margin-top:-230px;}
+    //&:nth-child(2){margin-top:-95px;}
   }
   .column{
     height: 100%;
