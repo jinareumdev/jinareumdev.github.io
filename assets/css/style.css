@@ -851,8 +851,6 @@ footer {
   .main-panel {
     width: 100%;
     transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1) 0s; }
-    .main-panel.toggle {
-      transform: translate3d(250px, 0, 0); }
 
   .sidebar.toggle {
     transform: translate3d(0, 0, 0);
@@ -863,9 +861,14 @@ footer {
       display: block;
       z-index: 99; }
 
+  /*] -- from Tablet to Mobile Navigation Class (1400px부터)-- [*/
+  html.sidebar-mo {
+    overflow: hidden; }
+
   .sidebar-dim.visible {
-    opacity: 1;
-    z-index: 1000; } }
+    display: block;
+    z-index: 100;
+    opacity: 1; } }
 @media all and (min-width: 0px) and (max-width: 780px) {
   #profile .bg-text {
     top: -40px;
