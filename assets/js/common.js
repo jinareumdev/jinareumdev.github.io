@@ -78,27 +78,30 @@ $(document).ready(function () {
 
     // sidebar
     var layout = (function () {
-        var components = {
-            body : $("body"),
-            wrap : $(".wrap"),
-            main : $(".main-panel"),
-            sideNav : $(".sidebar"),
-            sideBtn : $("#mob-menu"),
-            dimm : $(".sidebar-dim")
-        }
-        , figure = {
-            breakPoint: 1400 ,
-            sidebar_width : 250
-        }
-        , sidebar = {
-            init : function () { // 실행
+        var html = $("html"),
+            body = $("body"),
+            wrap = $(".wrap"),
+            main = $(".main-panel"),
+            sideNav = $(".sidebar"),
+            sideBtn = $("#mob-menu"),
+            dimm = $(".sidebar-dim"),
+            mob_size = 1400;
 
-            },
-            handler : function () {
-
+        $(window).resize(function () {
+            if( $(window).width() <= mob_size ){
+                $(html).addClass("sidebar-mo");
+                $(dimm).toggleClass("visible");
             }
-        }
-
+            else{
+                $(html).removeClass("sidebar-mo");
+                $(dimm).removeClass("visible");
+            }
+        });
+        $(dimm).click(function () {
+            $(html).removeClass("sidebar-mo");
+            $(dimm).removeClass("visible");
+        });
+        // 페이지 로드시 사용자 반응아니고, 코드에 의해 click 이벤트 실행
     })();
 
     // 링크 클릭 시 스크롤 이동 js
