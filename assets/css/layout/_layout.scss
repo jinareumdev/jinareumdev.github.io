@@ -8,7 +8,7 @@ body{
 @include breakPoint(mobile){
   html,body{position:relative;overflow-x:hidden;}
 }
-.wrap{background-color:$section-bg;}
+.wrap{position:relative;background-color:$section-bg;}
 .container{
   width: 100%;
   max-width:$content-max-width;

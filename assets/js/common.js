@@ -4,7 +4,7 @@ $(document).ready(function () {
         $contents = $(".main-panel .contents"),
         $doc = $("html,body");
 
-    //header logo
+    // PC header logo
     var movingLogo = (function () {
         var headerLogo = $('.header-logo');
         $(headerLogo).on('click', function () {
@@ -16,7 +16,6 @@ $(document).ready(function () {
     })();
     // PC navigation
     var pcNav = (function () {
-
         $secNav.on("click", "a" , function () {
             movingTarget();
         });
@@ -79,29 +78,28 @@ $(document).ready(function () {
     // sidebar
     var layout = (function () {
         var html = $("html"),
-            body = $("body"),
-            wrap = $(".wrap"),
-            main = $(".main-panel"),
-            sideNav = $(".sidebar"),
             sideBtn = $("#mob-menu"),
             dimm = $(".sidebar-dim"),
             mob_size = 1400;
 
-        $(window).resize(function () {
-            if( $(window).width() <= mob_size ){
-                $(html).addClass("sidebar-mo");
+        $(sideBtn).click(function () {
+            if( $(window).width() <= mob_size ) {
+                $(html).toggleClass("sidebar-mo");
                 $(dimm).toggleClass("visible");
             }
-            else{
+            else{ // pc
                 $(html).removeClass("sidebar-mo");
                 $(dimm).removeClass("visible");
             }
         });
-        $(dimm).click(function () {
+        $(dimm).on("click", function () {
             $(html).removeClass("sidebar-mo");
             $(dimm).removeClass("visible");
         });
         // 페이지 로드시 사용자 반응아니고, 코드에 의해 click 이벤트 실행
+        $(".side-close").click(function () {
+           $(dimm).trigger("click");
+        });
     })();
 
     // 링크 클릭 시 스크롤 이동 js
