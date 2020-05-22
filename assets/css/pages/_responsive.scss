@@ -3,15 +3,7 @@
 //===========================================================
 // Layout : PC;
 //===========================================================
-@include mediaQuery(900px){ // 900px부터 0px 까지
-  .output-list li{
-    width:calc(100%/2 - 10px);
-    &:nth-child(2n-1){margin-right:20px;clear:left;}
-    &:nth-child(3n+1) .output-bio:before,&:nth-child(3n+2) .output-bio:before, &:nth-child(3n+3) .output-bio:before{left:12.5%;}
-  }
-}
-
-@include mediaQuery(1400px){ // 1400px ~
+@include mediaQuery(1400px){ // 1400px 부터 0px까지
   // header
   .quick-nav, .header-logo{display:none!important;}
   .menu-btn{
@@ -42,6 +34,13 @@
   .main-panel{
     width:100%;
     transition:all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1) 0s;
+  }
+}
+@include mediaQuery(900px){ // 900px부터 0px 까지
+  .output-list li{
+    width:calc(100%/2 - 10px);
+    &:nth-child(2n-1){margin-right:20px;clear:left;}
+    &:nth-child(3n+1) .output-bio:before,&:nth-child(3n+2) .output-bio:before, &:nth-child(3n+3) .output-bio:before{left:12.5%;}
   }
 }
 @media (min-width:900px){ // 901px ~
@@ -89,6 +88,10 @@
   }
   .profile-list{
     .list-wrap{width:100%;}
+    .personal {
+      flex-direction: column;
+      .column{width:100%;}
+    }
   }
   #contact{
     padding-top: 250px;
@@ -111,9 +114,7 @@
 }
 
 @include breakPoint(device){
-  .output-list li{
-    width:100%;
-  }
+  .output-list li{width:100%;}
 }
 
 /*] -- from Tablet to Mobile Navigation Class (1400px부터)-- [*/
@@ -132,13 +133,7 @@ html.sidebar-mo{
       z-index:99;
     }
   }
-  // sidebar list
-  .slidebar-wrapper .mob-nab li {
-    &:nth-child(1){transition-delay:700ms;}
-    &:nth-child(2){transition-delay:800ms;}
-    &:nth-child(3){transition-delay:900ms;}
-    a{@include prefix(transform,translateY(0),webkit ms);}
-  }
+
   // 메인 컨텐츠 영역
   .main-panel{@include prefix(transform,translate3d(250px, 0, 0), webkit ms);}
   // dim

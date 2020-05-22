@@ -17,14 +17,28 @@ $(document).ready(function () {
     // PC navigation
     var pcNav = (function () {
         $secNav.on("click", "a" , function () {
-            movingTarget();
+            var $target = $(this).parent(),
+                idx = $target.index(),
+                section = $contents.eq(idx),
+                offsetTop = section.offset().top;
+            $doc.stop().animate({
+                scrollTop: offsetTop
+            },800);
+            return false;
         });
     })();
     // MOBILE navigation
     var mobNav = (function () {
         var $mobLink = $(".mob-nav li");
         $mobLink.on("click" , "a" , function () {
-           movingTarget();
+            var $target = $(this).parent(),
+                idx = $target.index(),
+                section = $contents.eq(idx),
+                offsetTop = section.offset().top;
+            $doc.stop().animate({
+                scrollTop: offsetTop
+            },800);
+            return false;
         });
     })();
 
@@ -101,16 +115,4 @@ $(document).ready(function () {
            $(dimm).trigger("click");
         });
     })();
-
-    // 링크 클릭 시 스크롤 이동 js
-    function movingTarget() {
-        var $target = $(this).parent(),
-            idx = $target.index(),
-            section = $contents.eq(idx),
-            offsetTop = section.offset().top;
-        $doc.stop().animate({
-            scrollTop: offsetTop
-        },800);
-        return false;
-    }
 });
