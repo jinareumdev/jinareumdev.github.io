@@ -177,11 +177,12 @@
         }
       }
       a{
-        display:block;
-        width: 35px;height: 35px;
+        display:inline-block;
+        height: 35px;
         margin-top:15px;
-        background:url($imgpath + 'link.png') 50% 50% no-repeat;
-        font-size:0;
+        background:url($imgpath + 'link.png') 0 50% no-repeat;
+        font-size:14px;line-height:40px;text-indent:35px;
+        color: $white;
       }
     }
     &.active{

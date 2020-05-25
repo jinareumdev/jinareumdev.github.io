@@ -3,7 +3,11 @@
 //===========================================================
 // Layout : PC;
 //===========================================================
-@include mediaQuery(1400px){ // 1400px 부터 0px까지
+@include mediaQuery(1920px , $menuPoint + 1px){
+  .profile-list .list-wrap:nth-child(2){margin-top:-50px;}
+  .profile-list .list-wrap:nth-child(3){margin-top:-105px;}
+}
+@include mediaQuery($menuPoint){ // 1400px 부터 0px까지
   // header
   .quick-nav, .header-logo{display:none!important;}
   .menu-btn{
@@ -115,6 +119,7 @@
 
 @include breakPoint(device){
   .output-list li{width:100%;}
+  footer{font-size:1.1rem;}
 }
 
 /*] -- from Tablet to Mobile Navigation Class (1400px부터)-- [*/
