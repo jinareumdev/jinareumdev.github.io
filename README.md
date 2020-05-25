@@ -10,14 +10,17 @@ jinareum.76@gmail.com
     + SASS(SCSS) 
         +  base /
             - reset.css
-	        - font.scss
+	        - font
       + helper
-        - mixin.scss
-        - variables.scss
+        - mixin
+        - variables
       + layout
-        - header.scss
-        - layout.scss
-        - footer.scss
+        - header
+        - layout
+        - footer
+      + pages
+        - index
+        - responsive
       + vendor
     + style
 * images /
