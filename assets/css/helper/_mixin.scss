@@ -125,7 +125,6 @@ $devicePoint:420px;
   @each $prefix in $prefixes {
     #{'-' + $prefix + '-' + $property}: $value;
   }
-
   #{$property}: $value;
 }
 
